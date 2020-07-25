@@ -10,7 +10,23 @@
 
 <body>
     <h1 class="tx"> Testando o Rolê</h1>
-    <p class="tx">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut saepe, dolores placeat adipisci ipsam blanditiis et veritatis dolorum totam assumenda enim accusantium vitae temporibus exercitationem, officiis necessitatibus commodi sit illo?</p>
+    <p class="tx">Meu zed é realmente a+</p>
+    <p class="tx">Bora de dale</p>
+
+    
+    <div class="mudei pra nao dar b.o" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"></div>
+    <div class="quadrado">
+        vem de dale
+    </div>
+
+
+    <h1>Somando valores</h1>
+    <input type="number" name="txtn1" id="txtn1">
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="SOMA" onclick="somar()">
+    <div id="res">Resultado</div>
+
+
 
     <script>
         //comentando esse bagulho doido
@@ -28,11 +44,79 @@
         var x2 = Number(prompt('outro valor'))
         var s = x1 + x2;
         alert(`A soma entre ${x1} e ${x2} é : ${s}`)
-        */
+        
 
+        //printf das variaveis de uma forma top
         var nome = prompt('Digite seu nome: ')
         document.write(`<h2 class="tx sombra"> Olá, ${nome}! Seu nome tem ${nome.length} letras. </h2>`)
         
+
+
+        //selecionando por tag
+        var corpo = window.document.body
+        corpo.style.background = 'gold'
+
+        var paraG = window.document.getElementsByTagName('p')[1]
+        window.document.write('Esta escrito assim: ' + paraG.innerText)
+        paraG.style.color = 'blue'
+        
+
+
+        //selecionando por id
+        var paraG = window.document.getElementById('id do bagulho aqui')
+        window.document.write('Esta escrito assim: ' + paraG.innerText)
+
+        //selecionando por nome
+        var paraG = window.document.getElementsByName('nome do bagulho aqui')[0]
+        
+
+        //selecionando por CLASSE e querySelector(que eu nao entendi muito bem)
+        var paraGra = window.document.getElementsByClassName('tx')[0]
+        //var paraGra =window.document.querySelector('p.tx')
+        paraGra.style.color = 'yellow'
+        */
+
+
+
+
+        
+        //interatividade e functions
+        var a = window.document.getElementsByClassName('quadrado')[0]
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar() {
+            a.innerText = 'clicada ta adpt'
+            a.style.background = 'red'
+        }
+
+        function entrar() {
+            a.innerText = 'enter'
+        }
+
+        function sair() {
+            a.innerText = 'saiu'
+            a.style.background = 'black'
+        }
+        
+
+
+
+        function somar() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${s}`
+        }
+
+
+
+
+
 
     </script>
 </body>
