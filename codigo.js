@@ -47,8 +47,39 @@
 
 
 
+        var numero1 = window.document.getElementsByClassName('bloco')[0]
+        numero1.addEventListener('click', um)
+        function um(){
+            numero1.style.background = 'black'
+            numero1 = '1' 
+
+            var result = window.document.getElementById('rest')
+            result.innerText =  numero1
+        }
+
+        var numero2 = window.document.getElementsByClassName('bloco')[1]
+        numero2.addEventListener('click', dois)
+        function dois(){
+            numero2.style.background = 'black'
+            numero2 = '2'
+
+
+            var result = window.document.getElementById('rest')
+            result.innerText =  numero1 + numero2
+        }
+
+
 
         
+
+
+
+
+
+
+
+
+
         //interatividade e functions
         var a = window.document.getElementsByClassName('quadrado')[0]
         a.addEventListener('click', clicar)
@@ -57,7 +88,7 @@
 
         function clicar() {
             a.innerText = 'clicada ta adpt'
-            a.style.background = 'red'
+            a.style.background = 'red' 
         }
 
         function entrar() {
@@ -72,6 +103,11 @@
 
 
 
+
+
+
+
+
         function somar() {
             var tn1 = window.document.getElementById('txtn1')
             var tn2 = window.document.getElementById('txtn2')
@@ -81,3 +117,9 @@
             var s = n1 + n2
             res.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${s}`
         }
+
+
+      
+
+
+
