@@ -57,17 +57,18 @@
             result.innerText =  numero1
         }
 
+        
         var numero2 = window.document.getElementsByClassName('bloco')[1]
         numero2.addEventListener('click', dois)
         function dois(){
             numero2.style.background = 'black'
             numero2 = '2'
 
-
             var result = window.document.getElementById('rest')
-            result.innerText =  numero1 + numero2
+            result.innerText = numero2
         }
-
+    
+        
 
 
         
