@@ -43,7 +43,7 @@
         var paraGra = window.document.getElementsByClassName('tx')[0]
         //var paraGra =window.document.querySelector('p.tx')
         paraGra.style.color = 'yellow'
-        */
+       
 
 
 
@@ -102,13 +102,6 @@
         }
         
 
-
-
-
-
-
-
-
         function somar() {
             var tn1 = window.document.getElementById('txtn1')
             var tn2 = window.document.getElementById('txtn2')
@@ -120,7 +113,7 @@
         }
 
 
-      
+       */
 
 
 
