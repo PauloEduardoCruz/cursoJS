@@ -113,7 +113,33 @@
         }
 
 
-       */
+       
 
 
 
+function calcular() {
+    var txtv = window.document.getElementById('txtvel')
+    var res = window.document.getElementsByClassName('res')[0]
+    var vel = Number(txtv.value)
+
+    res.innerHTML = `Sua velocidade é: ${vel}Km/h`
+    if (vel > 60){
+        res.innerHTML += '<p> Segura a multa otario </p>'
+    }
+    res.innerHTML += '<p> Dirija sempre com sinto de segurança </p>'
+}
+*/
+
+function verificar() {
+    var txtv = window.document.querySelector('input#txtvel')
+    var vel = (txtv.value)
+
+    var res = window.document.querySelector('div#res')
+    res.innerHTML = `<p>Você está em <strong>${vel}</strong><p>`
+
+    if (vel.toUpperCase() == 'BRASIL') {
+        res.innerHTML += '<p>Você é <strong>Brasileiro!</strong><p>'
+    } else {
+        res.innerHTML += '<p>Você é <strong>Estrangeiro!</strong><p>'
+    }
+}
