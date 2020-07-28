@@ -143,3 +143,56 @@ function verificar() {
         res.innerHTML += '<p>Você é <strong>Estrangeiro!</strong><p>'
     }
 }
+
+
+
+function votante() {
+    var recipiente = window.document.getElementById('txtID')
+    var idade = Number(txtID.value)
+
+    var tela = window.document.getElementsByClassName('tela')[0]
+    //tela.innerHTML = `sua idade: ${idade}` TEM QUE COLOCAR O MAIS NOS OUTROS PRA ESSE AAPRECER
+
+    if (idade >= 18 && idade <= 70) {
+        tela.innerHTML = `tu vota!`
+    } else if (idade >= 16 && idade <= 17 || idade > 70){
+        tela.innerHTML = `opicional`
+    }else 
+        tela.innerHTML = `Não vota`    
+}
+
+
+
+function diaSemana() {
+    var agora = new Date()
+    var diaS = agora.getDay()
+
+    var mostraDia = window.document.getElementsByClassName('mostraDia')[0]
+
+    switch (diaS) {
+        case 0:
+            mostraDia.innerHTML = `Domingo du dale` 
+            break;
+        case 1:
+            mostraDia.innerHTML = `Segunda du dale` 
+            break;
+        case 2:
+            mostraDia.innerHTML = `Terça du dale` 
+            break;
+        case 3:
+            mostraDia.innerHTML = `Quarta du dale` 
+            break;
+        case 4:
+            mostraDia.innerHTML = `Quinta du dale` 
+            break;
+        case 5:
+            mostraDia.innerHTML = `Sexta du dale` 
+            break;
+        case 6:
+            mostraDia.innerHTML = `Sabado du dale` 
+            break;
+        default:
+            mostraDia.innerHTML = `dia FAKE du dale` 
+            break;
+    } 
+}
