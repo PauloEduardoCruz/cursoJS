@@ -130,6 +130,10 @@ function calcular() {
 }
 */
 
+
+
+
+/*
 function verificar() {
     var txtv = window.document.querySelector('input#txtvel')
     var vel = (txtv.value)
@@ -196,3 +200,30 @@ function diaSemana() {
             break;
     } 
 }
+
+*/
+
+
+
+function carregar() {
+    var msg = window.document.getElementsByClassName('msg')[0]
+    var fot = window.document.getElementsByClassName('fot')[0]
+    
+    var data = new Date()
+    var hora = data.getHours()
+
+    msg.innerHTML = `Agora são ${hora} horas`
+
+    if (hora >= 0 && hora < 12) {
+        fot.src = "/_img/diaf.png"
+        document.body.style.background = '#e9a03e'
+
+    } else if (hora >= 12 && hora < 18) {
+        fot.src = "/_img/tardef.png"
+        document.body.style.background = '#467397'
+    } else {
+        fot.src = "/_img/noitef.png"
+        document.body.style.background = '#152342'
+    }
+}
+
