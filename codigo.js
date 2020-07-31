@@ -227,3 +227,63 @@ function carregar() {
     }
 }
 
+function rodar() {
+    var screen = window.document.body.getElementsByClassName('screen')[0]
+
+    var txtIN = document.getElementById('txtIN')
+
+    var txtFIM = document.getElementById('txtFIM')
+
+    var txtPS = document.getElementById('txtPS')
+
+    var x = 10
+ 
+    // vendo se o input ta vazio, pra funcinar não posso ter convertido pra number
+    if(txtIN.value.length == 0 || txtFIM.value.length == 0 || txtPS.value.length == 0){
+        alert('falta dado')
+
+    } else {
+        var txtIN = Number(txtIN.value)
+        var txtFIM = Number(txtFIM.value)
+        var txtPS = Number(txtPS.value)
+
+        if(txtPS <= 0){
+            txtPS = 1
+        }
+
+        //contando Cres
+        if (txtIN < txtFIM){
+            for (i = txtIN ; i <= txtFIM; i=i + txtPS) {
+                screen.innerHTML += ` _ ${i} _ <br>`
+            } 
+        } else{
+            //Contando Decres
+            for (i = txtIN ; i >= txtFIM; i=i - txtPS) {
+                screen.innerHTML += ` _ ${i} _ <br>`
+            }
+        }
+
+    }
+}
+
+
+
+function tabulada() {
+    
+    var txtTAB = window.document.getElementById('txtTAB')
+    var n = Number(txtTAB.value)
+
+
+    
+    var tab = window.document.getElementById('seltab')
+
+    //limpando para não repetir tabuadas
+    tab.innerHTML = ''
+    let i = 1
+    while (i <= 10) {
+        let item = document.createElement('option')
+        item.text = `${n} x ${i} = ${n*i}`
+        tab.appendChild(item)
+        i++
+    }
+}
