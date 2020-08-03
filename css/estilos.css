@@ -37,3 +37,13 @@ footer{
     min-height: 100vh;
     background-color: tomato;
 }
+
+
+.domingo{
+    min-height: 100vh;
+    background-color: wheat;
+}
+
+select{
+    width: 300px;
+}

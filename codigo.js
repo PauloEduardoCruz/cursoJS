@@ -287,3 +287,157 @@ function tabulada() {
         i++
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//var veio = adicionar()
+var h = 45
+var vetorA = [10, 200]
+vetorA.push(h)
+//vetorA = adicionar(vetorA)
+
+var stela = window.document.getElementsByClassName('segTELA')[0]
+stela.innerText += vetorA[0]
+
+
+
+
+function fim() {
+    var stela = window.document.getElementsByClassName('segTELA')[0]
+    stela.innerText += '1'
+}
+
+
+
+
+// obj pegar o VALOR e tranferir pra um vetor fora da função
+
+function adicionar() {
+    var valor = window.document.getElementById('dsVALOR')
+    var valor = Number(valor.value)
+    var tela = window.document.getElementById('dsTELA')
+
+    //var vetor[outro parametro que preciso criar] = valor
+    //vetor[0]= valor
+
+   //tela.innerHTML = ''
+
+    let item = document.createElement('option')
+    item.text = `Valor ${valor} adicionado`
+    //item.text = `${n} x ${i} = ${n*i}`
+    tela.appendChild(item)
+
+
+    return voltar
+}
+
+//adiciona o valor 7 no ultomo lugar do vetor
+//vetorA.push(7) 
+
+//cumprimnto do vetor
+//vetorA.length
+
+//alinhar os bagulho dentro do vetor
+//vetorA.sort()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let num = document.querySelector('input#fnum')
+let lista = document.querySelector('select#flista') 
+let res = document.querySelector('div#res')
+let valores = []
+
+
+function isNumero(n) {
+    if(Number(n) >= 1 && Number(n) <= 100){
+        return true
+    } else{
+        return false
+    }
+        
+}
+
+
+function inLista(n, l) {
+    if(l.indexOf(Number(n)) != -1){
+        return true
+    } else{
+        return false
+    }
+    
+}
+
+
+function add() {
+    if(isNumero(num.value) && !inLista(num.value, valores)){
+        window.alert('tudo OK')
+    } else {
+        window.alert('invalido ou já na lista')
+    }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
