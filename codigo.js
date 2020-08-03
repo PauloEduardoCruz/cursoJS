@@ -390,16 +390,13 @@ let lista = document.querySelector('select#flista')
 let res = document.querySelector('div#res')
 let valores = []
 
-
 function isNumero(n) {
     if(Number(n) >= 1 && Number(n) <= 100){
         return true
     } else{
         return false
-    }
-        
+    }  
 }
-
 
 function inLista(n, l) {
     if(l.indexOf(Number(n)) != -1){
@@ -407,17 +404,56 @@ function inLista(n, l) {
     } else{
         return false
     }
-    
 }
-
 
 function add() {
     if(isNumero(num.value) && !inLista(num.value, valores)){
-        window.alert('tudo OK')
+        valores.push(Number(num.value))
+        let it = document.createElement('option')
+        it.text = `valor ${num.value} adicionado`
+        lista.appendChild(it)
+        res.innerHTML = ' '
     } else {
         window.alert('invalido ou já na lista')
     }
   
+    num.value = ''
+    num.focus()
+}
+
+
+function finalizar() {
+    if(valores.length == 0){
+        alert('adicione valores antes de finalizar')
+    } else {
+        let tot = valores.length
+        let maior = valores[0]
+        let menor = valores[0]
+        let soma = 0
+        let media = 0
+
+        for (let pos in valores) {
+            soma += valores[pos]
+            if(valores[pos] > maior){
+                maior = valores[pos]
+            }
+            if(valores[pos] < menor)
+                menor = valores[pos]
+        }
+
+        media = soma / tot
+        res.innerHTML = ''
+        res.innerHTML += `<p>Ao todo temos ${tot} elementos</p>`
+        res.innerHTML += `<p>Maior valor informado: ${maior}</p>`
+        res.innerHTML += `<p>Menor valor informado: ${menor}</p>`
+        res.innerHTML += `<p>Soma dos valores: ${soma}</p>`
+        res.innerHTML += `<p>Media dos valores: ${media}</p>`
+    }
+
+
+    
+
+
 }
 
 
