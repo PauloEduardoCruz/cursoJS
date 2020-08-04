@@ -10,28 +10,20 @@
 </head>
 
 
-<body onload="carregar()">
+<body>
     
-
-
-
-
-
 
     <div class="domingo">
         <header>
-            <h1>perdi o desafio</h1>
+            <h1>TITULO</h1>
         </header>
 
         <section>
             <div>
-                Numero entre 1 e 100:
-                <input type="number" name="fnum" id="fnum">
-                <input type="button" value="    ADD     " onclick="add()">
-
-                <br><br><select name="flista" id="flista" size="6"></select>
-                <br><input type="button" value="    FIM     " onclick="finalizar()">
+                <button id="bt" onclick="add()">-</button>
             </div>
+
+            
 
             <div id="res">famoso res</div>
         </section>
@@ -45,183 +37,30 @@
 
 
 
+    <div class="segunda">
+        <audio id="sound" src="/Alarm.mp3" style="display: none;"></audio>
 
+        <div class="contai">
+            <h2>Minutos: </h2>
+            <select name="minutos" id="minutos"></select>
 
+            <h2>Segundos:</h2>
+            <select name="segundos" id="segundos"></select>
+            <br>
+            <br>
 
+            <button id="comecar">iniciar</button>
 
-
-
-    <div class="domingo">
-        <header>
-            <h1>Desafiado</h1>
-        </header>
-
-        <section>
-
-            Número (entre 1 e 100): <input type="number" name="dsVALOR" id="dsVALOR">
-            <input type="button" value="    ADD     " onclick="adicionar()">
-
-            <div class="tv">
-                <select name="mostrador" id="dsTELA" size="10">
-                    <option>Digite um número acima  </option>
-                </select>
+            <div id="display">
+                <h3>tela</h3>
             </div>
 
-            <input type="button" value="    FIM     " onclick="fim()">
-            <div class="segTELA"> 
-                segunda tela - 
-            </div>
-            
-        </section>
-
-        <footer>
-            <p>&copy; Paulo Cruz</p>
-        </footer>
+        </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="sexta">
-        <header>
-            <h1>É o Deish</h1>
-        </header>
-
-        <section>
-
-            Número: <input type="number" name="txtTAB" id="txtTAB">
-            <input type="button" value="    Gerar tabuada     " onclick="tabulada()">
-
-            <div class="tv">
-                <select name="tabuada" id="seltab" size="10">
-                    <option>Digite um número acima  </option>
-                </select>
-            </div>
-            
-        </section>
-
-        <footer>
-            <p>&copy; Paulo Cruz</p>
-        </footer>
-    </div>
-
-
-
-
-
-
-
-
-
-    <div class="quinta">
-        <header>
-            <h1>É o Dale</h1>
-        </header>
-
-        <section>
-            <p>INÍCIO: <input type="number" name="txtIN" id="txtIN"></p>
-            <p>FIM......: <input type="number" name="txtIN" id="txtFIM"></p>
-            <p>PASSO: <input type="number" name="txtIN" id="txtPS"></p>
-            
-            <input type="button" value="    vem de dale     " onclick="rodar()">
-
-            <div class="screen">
-                
-            </div>
-            
-        </section>
-
-        <footer>
-            <p>&copy; Paulo Cruz</p>
-        </footer>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="tudo">
-        <header>
-            <h1>Hora do dias</h1>
-        </header>
-
-        <section>
-            <div class="msg">
-                mensagem aqui
-            </div>
-            <div class="foto">
-                <img class="fot" src="#e9a03e" alt="imagem do dia">
-            </div>
-        </section>
-
-        <footer>
-            <p>&copy; Paulo Cruz</p>
-        </footer>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <h1>Seu país</h1>
-    país <input type="text" name="txtvel" id="txtvel" onmouseout="verificar()">
-    <input type="button" value="    Verificar   " onclick="verificar()">
-    <div id="res">
-    </div>
-
-
-    <h1>Vota ou não?</h1>
-    idade <input type="number" name="txtID" id="txtID" onmouseout="votante()">
-    <div class="tela"></div>
-
-
-    <h1>Conferindo o dia da semana</h1>
-    <input type="button" value="    Dia da Semana      " onclick="diaSemana()">
-    <div class="mostraDia"></div>
     
 
-    <script type="text/javascript" src="codigo.js"></script>
+
+    <script type="text/javascript" src="/codigos2.js"></script>
 </body>
 </html>
 

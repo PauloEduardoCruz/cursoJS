@@ -205,6 +205,66 @@ function diaSemana() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function carregar() {
     var msg = window.document.getElementsByClassName('msg')[0]
     var fot = window.document.getElementsByClassName('fot')[0]
@@ -449,10 +509,6 @@ function finalizar() {
         res.innerHTML += `<p>Soma dos valores: ${soma}</p>`
         res.innerHTML += `<p>Media dos valores: ${media}</p>`
     }
-
-
-    
-
 
 }
 
