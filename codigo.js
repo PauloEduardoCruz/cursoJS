@@ -346,7 +346,7 @@ function tabulada() {
         tab.appendChild(item)
         i++
     }
-<<<<<<< HEAD
+
 }
 
 
@@ -512,6 +512,7 @@ function finalizar() {
     }
 
 }
+
 
 
 

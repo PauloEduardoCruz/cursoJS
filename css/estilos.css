@@ -29,22 +29,4 @@ footer{
 
 .segunda{
     min-height: 100vh;
-<<<<<<< HEAD
-    background-color: rgb(253, 253, 253);
-}
-
-.contai{
-    text-align: center;
-}
-
-button{
-    background: #069;
-    color: white;
-    font-size: 32px;
-    padding: 8px 20px;
-    cursor: pointer;
-    border: 0; 
-=======
-    background-color: tomato;
->>>>>>> parent of a423711... caso eu não consiga voltar nesse ponto
 }
