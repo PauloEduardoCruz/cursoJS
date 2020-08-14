@@ -22,15 +22,6 @@ footer{
     text-align: center;
 }
 
-<<<<<<< HEAD
-.domingo{
-    min-height: 100vh;
-    background-color: wheat;
-}
-
-.segunda{
-    min-height: 100vh;
-=======
 .quinta{
     min-height: 100vh;
     background-color: teal;
@@ -39,5 +30,4 @@ footer{
 .sexta{
     min-height: 100vh;
     background-color: tomato;
->>>>>>> parent of a423711... caso eu não consiga voltar nesse ponto
 }

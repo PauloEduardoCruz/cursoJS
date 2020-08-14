@@ -346,7 +346,6 @@ function tabulada() {
         tab.appendChild(item)
         i++
     }
-<<<<<<< HEAD
 
 }
 
@@ -536,6 +535,3 @@ function finalizar() {
 
 
 
-=======
-}
->>>>>>> parent of a423711... caso eu não consiga voltar nesse ponto
