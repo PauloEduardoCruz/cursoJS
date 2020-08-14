@@ -10,28 +10,55 @@
 </head>
 
 
-<body class="domingo">
-        <section>
-            <button type="button" class="btn btn-primary" onclick="velha()">Velha</button>
+<body>
+    
 
-            <div class="grid-container">
-                <div class="a1 cor" onclick="a1f()"></div>
-                <div class="a2 cor" onclick="a2f()"></div>
-                <div class="a3 cor" onclick="a3f()"></div>
-                <div class="a4 cor" onclick="a4f()"></div>
-                <div class="a5 cor" onclick="a5f()">.</div>
-                <div class="a6 cor" onclick="a6f()"></div>
-                <div class="a7 cor" onclick="a7f()"></div>
-                <div class="a8 cor" onclick="a8f()"></div>
-                <div class="a9 cor" onclick="a9f()"></div>
+    <div class="domingo">
+        <header>
+            <h1>TITULO</h1>
+        </header>
+
+        <section>
+            <div>
+                <button id="bt" onclick="add()">-</button>
             </div>
 
-              <button id="p1" type="button" class="contadorPTS btn-primary">0</button>
-              <button type="button" class="btn btn-primary" onclick="jogador1()">J-1</button>
-              <button type="button" class="btn btn-primary" onclick="jogador2()">J-2</button>
-              <button id="p2" type="button" class="contadorPTS btn-primary">0</button>
-              
+            
+
+            <div id="res">famoso res</div>
         </section>
+
+        <footer>
+            <p>&copy; Paulo Cruz</p>
+        </footer>
+    </div>
+
+
+
+
+
+    <div class="segunda">
+        <audio id="sound" src="/Alarm.mp3" style="display: none;"></audio>
+
+        <div class="contai">
+            <h2>Minutos: </h2>
+            <select name="minutos" id="minutos"></select>
+
+            <h2>Segundos:</h2>
+            <select name="segundos" id="segundos"></select>
+            <br>
+            <br>
+
+            <button id="comecar">iniciar</button>
+
+            <div id="display">
+                <h3>tela</h3>
+            </div>
+
+        </div>
+    </div>
+    
+
 
     <script type="text/javascript" src="/codigos2.js"></script>
 </body>
