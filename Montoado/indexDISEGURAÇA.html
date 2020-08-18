@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CursoJS</title>
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+
+
+
+<body>
+
+
+
+
+
+<div class="quinta">
+    <audio id="sound" src="/Alarm.mp3" style="display: none;"></audio>
+    
+    <header>
+        <h1>Primeira Tela</h1>
+    </header>
+
+    <section>
+
+        Número: <input type="number" name="txtTAB" id="txtTAB">
+        <input type="button" value="    Gerar tabuada     " onclick="tabulada()">
+
+        <div class="tv">
+            <select name="tabuada" id="seltab" size="10">
+                <option>Digite um número acima </option>
+            </select>
+        </div>
+
+    </section>
+
+</div>
+
+
+
+
+
+<div class="sexta">
+    <header>
+        <h1>Segunda Tela</h1>
+    </header>
+
+    <section>
+        <p>INÍCIO: <input type="number" name="txtIN" id="txtIN"></p>
+        <p>FIM......: <input type="number" name="txtIN" id="txtFIM"></p>
+        <p>PASSO: <input type="number" name="txtIN" id="txtPS"></p>
+
+        <div id="res">famoso res</div>
+    </section>
+</div>
+
+
+
+
+
+<div class="sabado">
+    <audio id="sound" src="/Alarm.mp3" style="display: none;"></audio>
+
+    <div class="grid-contador">
+        <h2>Terceira Tela</h2>
+        <select name="minutos" id="minutos"></select>
+
+        <h2>Segundos:</h2>
+        <select name="segundos" id="segundos"></select> <br><br>
+
+        <button id="comecar">iniciar</button>
+        <div id="display">
+            <h3>tela</h3>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+    <script type="text/javascript" src="/codigos2.js"></script>
+</body>
+</html>
+

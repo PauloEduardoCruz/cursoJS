@@ -1,38 +1,7 @@
 
-var bt = document.getElementById('bt')
-
-function add(){
-    bt.innerHTML = "X"
+function tabulada() {
+    document.getElementById("sound").play()
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -44,6 +13,7 @@ var comecar = document.getElementById('comecar')
 
 
 
+
 var cronometroSeg
 var minutoAtual
 var segundoAtual
@@ -51,12 +21,15 @@ var interval
 
 for (var i = 0; i <= 60; i++) {
     minutos.innerHTML += '<option value="'+i+'">'+i+'</option>'
-    
 }
 
 for (var i = 1; i <= 60; i++) {
     segundos.innerHTML += '<option value="'+i+'">'+i+'</option>'  
 }
+
+
+
+
 
 comecar.addEventListener('click', function(){
     minutoAtual = minutos.value
@@ -71,7 +44,7 @@ comecar.addEventListener('click', function(){
                 minutoAtual--;
                 segundoAtual = 59
             } else{
-                //document.getElementById("sound").play()
+                document.getElementById("sound").play()
                 clearInterval(interval)
             }
         }

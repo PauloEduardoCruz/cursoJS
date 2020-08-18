@@ -18,16 +18,11 @@ section{
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.514);
     text-align: center;
 }
-footer{
-    text-align: center;
-}
 
-.quinta{
-    min-height: 100vh;
-    background-color: teal;
-}
+
 
 .sexta{
     min-height: 100vh;
     background-color: tomato;
 }
+
