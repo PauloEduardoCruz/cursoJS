@@ -98,7 +98,7 @@ function parEip(limite) {
     }
 
 }
-*/
+
 
 
 const filme = {
@@ -120,3 +120,70 @@ function exibeGeral(obj) {
     }
 
 }
+
+
+
+somando(5)
+
+function somando(limite) {
+    var soma=0
+
+    for (let i = 0; i <= limite; i++) {
+
+        if (i % 3 == 0) {
+            console.log(i)
+            soma=soma+i
+        }
+        if (i % 5 == 0) {
+            console.log(i)
+            soma=soma+i
+        }
+    }
+    console.log('Valor da soma: ',soma)
+}
+
+
+
+
+var array = [90,90,89]
+
+funcNotas(array)
+
+
+function funcNotas(notas) {
+    var soma = 0
+    for (let index = 0; index < 3; index++) {
+        console.log(notas[index])
+        soma = soma + notas[index]
+    }
+
+    soma = soma / 3
+    console.log('Média dos valores:',soma)
+
+    if (soma < 60) {
+        console.log('F') 
+    } else{
+        if (soma < 70) {
+            console.log('D')
+        }else{
+            if (soma < 80) {
+                console.log('C')
+            } else{
+                if (soma < 90) {
+                    console.log('B')
+                } else {
+                    if (soma <= 100) {
+                        console.log('A')
+                    }
+                }
+            }
+        }
+    }
+}
+
+*/
+
+
+
+
+
