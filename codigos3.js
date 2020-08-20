@@ -181,6 +181,37 @@ function funcNotas(notas) {
     }
 }
 
+
+
+
+const celular = {
+    tamanhoTela: {
+        vertical: 155,
+        horizontal: 75
+    },
+    ligar: function () {
+        console.log("Fazendo Ligação...")
+    }
+}
+
+let msm = celular.tamanhoTela.horizontal
+console.log('primeiro obj: ',msm)
+
+
+
+/// MANEIRA COMPLETA DE DUPLICAR UM IBJ
+const novoObjeto = Object.assign({
+    bateria: 5000,
+    vertical: 777
+}, celular)
+
+console.log('Segundo obj: ',novoObjeto.vertical)
+
+/// MANEIRA RÁPIDA DE DUPLICAR UM OBJ
+const objeto3 = {...novoObjeto}
+console.log('Terceiro obj: ',objeto3)
+
+
 */
 
 
