@@ -212,7 +212,55 @@ const objeto3 = {...novoObjeto}
 console.log('Terceiro obj: ',objeto3)
 
 
+
+
+
+//                                                 MINI 11
+const endereco = {
+    
+    rua: 05,
+    cidade: 'Brasília',
+    cep: 72309305,
+}
+
+
+function mostraEn(endereco) {
+    for(let chave in endereco){
+        console.log(chave, endereco[chave])
+    }
+}
+
+mostraEn(endereco)
+
+
+
+
+
+
+//                                  COMPARAÇÃO DENTRO DE OBJ
+function Endereco(rua, cidade, cep) {
+    this.rua = rua,
+    this.cidade = cidade,
+    this.cep = cep
+}
+
+const endereco1 = new Endereco('a', 'b', 'c')
+const endereco2 = new Endereco('a', 'b', 'c')
+
+function saoIguais(endereco1, endereco2) {
+    if (endereco1.rua === endereco2.rua &&
+        endereco1.cidade === endereco2.cidade &&
+        endereco1.cep === endereco2.cep) {
+        return true
+    } else return false  
+}
+
+console.log(saoIguais(endereco1, endereco2))
+console.log(endereco1)
 */
+
+
+
 
 
 
