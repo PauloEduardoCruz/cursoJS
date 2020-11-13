@@ -9,26 +9,94 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./IMG/yll.png">
 
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
 </head>
 
 
 <body>
 
-<div class="sexta">
+<div class="area1" id="area1">
     <header>
-        <h1>Primeira Tela</h1>
+        <h1 id="titulo">Primeira Tela</h1>
     </header>
 
-    <section>
-        <div id="res" PRONTO PRA MANDAR VER</div>
+    <section class="bloco" onclick="">
+
+        <div class="tx" id="tx">------</div>
+        <p class="tx2" id="tx2">------</p>
+
+        <p class="res" id="res">TELA</p>
+
     </section>
 </div>
 
 
 
 
-    <script type="text/javascript" src="/codigos3.js"></script>
+
+
+
+
+<div class="area2">
+    <header>
+        <h1 >TABUADA</h1>
+    </header>
+
+    <section>
+        Número: <input type="number" name="txtTAB" id="txtTAB">
+        <input type="button" value="    Gerar tabuada     " onclick="tabulada()">
+
+        <div class="tv">
+            <select name="tabuada" id="seltab" size="10">
+                <option>Digite um número acima </option>
+            </select>
+        </div>
+    </section>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="area1">
+    <audio id="sound" src="./Montoado/Alarm.mp3" style="display: none;"></audio>
+
+
+    <header>
+        <h1 >Timer</h1>
+    </header>
+
+    <section class="grid-contador">
+        <h2>Terceira Tela</h2>
+        <select name="minutos" id="minutos"></select>
+
+        <h2>Segundos:</h2>
+        <select name="segundos" id="segundos"></select> <br><br>
+
+        <button id="comecar">iniciar</button>
+        <div id="display">
+            <h3>tela</h3>
+        </div>
+    </section>
+
+</div>
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="./codigo.js"></script>
+    <script type="text/javascript" src="./codigos2.js"></script>
+    <script type="text/javascript" src="./montoado/timer.js"></script>
 </body>
 </html>
 

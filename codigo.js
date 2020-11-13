@@ -1,4 +1,13 @@
         //comentando esse bagulho doido
+
+
+        //selecionando por tag
+        var corpo = window.document.body
+        corpo.style.background = 'gold'
+        
+
+
+
         /*
         alert('Olá mundo')
         confirm('Tu é mano?')
@@ -46,7 +55,7 @@
        
 
 
-
+        //Muda cor background e muda um nome
         var numero1 = window.document.getElementsByClassName('bloco')[0]
         numero1.addEventListener('click', um)
         function um(){
@@ -57,16 +66,6 @@
             result.innerText =  numero1
         }
 
-        
-        var numero2 = window.document.getElementsByClassName('bloco')[1]
-        numero2.addEventListener('click', dois)
-        function dois(){
-            numero2.style.background = 'black'
-            numero2 = '2'
-
-            var result = window.document.getElementById('rest')
-            result.innerText = numero2
-        }
     
         
 
@@ -106,8 +105,10 @@
             var tn1 = window.document.getElementById('txtn1')
             var tn2 = window.document.getElementById('txtn2')
             var res = window.document.getElementById('res')
-            var n1 = Number(tn1.value)
-            var n2 = Number(tn2.value)
+            //var n1 = Number(tn1.value)
+            //var n2 = Number(tn2.value)
+            var n1 = Number(tn1.innerText)
+            var n2 = Number(tn2.innerHTML)
             var s = n1 + n2
             res.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${s}`
         }
@@ -151,18 +152,18 @@ function verificar() {
 
 
 function votante() {
-    var recipiente = window.document.getElementById('txtID')
-    var idade = Number(txtID.value)
+    var tx = window.document.getElementById('tx')
+    var idade = Number(tx.innerText)
 
-    var tela = window.document.getElementsByClassName('tela')[0]
-    //tela.innerHTML = `sua idade: ${idade}` TEM QUE COLOCAR O MAIS NOS OUTROS PRA ESSE AAPRECER
+    var tela = window.document.getElementById('res')
+    tela.innerHTML = `<p> sua idade: ${idade} </p>` 
 
     if (idade >= 18 && idade <= 70) {
-        tela.innerHTML = `tu vota!`
+        tela.innerHTML += `tu vota!`
     } else if (idade >= 16 && idade <= 17 || idade > 70){
-        tela.innerHTML = `opicional`
+        tela.innerHTML += `opicional`
     }else 
-        tela.innerHTML = `Não vota`    
+        tela.innerHTML += `Não vota`    
 }
 
 
@@ -266,8 +267,8 @@ function diaSemana() {
 
 
 function carregar() {
-    var msg = window.document.getElementsByClassName('msg')[0]
-    var fot = window.document.getElementsByClassName('fot')[0]
+    var msg = window.document.getElementsByClassName('tx')[0]
+    var fot = window.document.getElementsByClassName('foto')[0]
     
     var data = new Date()
     var hora = data.getHours()
@@ -275,37 +276,43 @@ function carregar() {
     msg.innerHTML = `Agora são ${hora} horas`
 
     if (hora >= 0 && hora < 12) {
-        fot.src = "/_img/diaf.png"
+        fot.src = "http://hostelexplorer.com.br/new/wp-content/uploads/2018/05/trilha-praia_da_luz-imbituba-praia_do_rosa-hostel_explorer.jpg"
         document.body.style.background = '#e9a03e'
 
     } else if (hora >= 12 && hora < 18) {
-        fot.src = "/_img/tardef.png"
+        fot.src = "http://hostelexplorer.com.br/new/wp-content/uploads/2018/05/nascer_do_sol-praia_do_rosa-deck_albergue_explorer.jpg"
         document.body.style.background = '#467397'
     } else {
-        fot.src = "/_img/noitef.png"
+        fot.src = "http://hostelexplorer.com.br/new/wp-content/uploads/2018/05/lua_cheia-praia_do_rosa-deck_albergue_explorer.jpg"
         document.body.style.background = '#152342'
     }
 }
 
+
+
 function rodar() {
-    var screen = window.document.body.getElementsByClassName('screen')[0]
+    var screen = document.getElementById('res')
 
-    var txtIN = document.getElementById('txtIN')
+    var txtIN = document.getElementById('tx')
 
-    var txtFIM = document.getElementById('txtFIM')
+    var txtFIM = document.getElementById('tx2')
 
-    var txtPS = document.getElementById('txtPS')
+    var txtPS = document.getElementById('tx3')
 
     var x = 10
+
+    var txtIN = Number(txtIN.innerText)
+    var txtFIM = Number(txtFIM.innerText)
+    var txtPS = Number(txtPS.innerText)
  
     // vendo se o input ta vazio, pra funcinar não posso ter convertido pra number
-    if(txtIN.value.length == 0 || txtFIM.value.length == 0 || txtPS.value.length == 0){
-        alert('falta dado')
+    //if(txtIN.value.length == 0 || txtFIM.value.length == 0 || txtPS.value.length == 0){
+    //    alert('falta dado')
+   // } 
 
-    } else {
-        var txtIN = Number(txtIN.value)
-        var txtFIM = Number(txtFIM.value)
-        var txtPS = Number(txtPS.value)
+    if(txtIN == 0 || txtFIM == 0 || txtPS == 0){
+        alert('falta dado')
+    }  else {
 
         if(txtPS <= 0){
             txtPS = 1
@@ -322,8 +329,8 @@ function rodar() {
                 screen.innerHTML += ` _ ${i} _ <br>`
             }
         }
-
     }
+        
 }
 
 
@@ -332,9 +339,8 @@ function tabulada() {
     
     var txtTAB = window.document.getElementById('txtTAB')
     var n = Number(txtTAB.value)
-
-
     
+
     var tab = window.document.getElementById('seltab')
 
     //limpando para não repetir tabuadas
@@ -373,45 +379,26 @@ function tabulada() {
 
 
 
-//var veio = adicionar()
+
 var h = 45
 var vetorA = [10, 200]
 vetorA.push(h)
-//vetorA = adicionar(vetorA)
 
-var stela = window.document.getElementsByClassName('segTELA')[0]
-stela.innerText += vetorA[0]
+var stela = window.document.getElementsByClassName('')[0]
+//stela.innerText += vetorA[2]
 
-
-
-
-function fim() {
-    var stela = window.document.getElementsByClassName('segTELA')[0]
-    stela.innerText += '1'
-}
-
-
-
-
-// obj pegar o VALOR e tranferir pra um vetor fora da função
 
 function adicionar() {
-    var valor = window.document.getElementById('dsVALOR')
-    var valor = Number(valor.value)
-    var tela = window.document.getElementById('dsTELA')
+    var valor = window.document.getElementById('tx')
+    var valor = Number(valor.innerText)
+    console.log(valor)
+    var tela = window.document.getElementById('res')
 
-    //var vetor[outro parametro que preciso criar] = valor
-    //vetor[0]= valor
-
-   //tela.innerHTML = ''
 
     let item = document.createElement('option')
     item.text = `Valor ${valor} adicionado`
-    //item.text = `${n} x ${i} = ${n*i}`
     tela.appendChild(item)
 
-
-    return voltar
 }
 
 //adiciona o valor 7 no ultomo lugar do vetor
@@ -445,10 +432,10 @@ function adicionar() {
 
 
 
-
-let num = document.querySelector('input#fnum')
-let lista = document.querySelector('select#flista') 
-let res = document.querySelector('div#res')
+// ENTENDI MAIS OU MENOS
+//let num = document.querySelector('input#fnum')
+//let lista = document.querySelector('select#flista') 
+//let res = document.querySelector('div#res')
 let valores = []
 
 function isNumero(n) {
@@ -510,7 +497,6 @@ function finalizar() {
         res.innerHTML += `<p>Soma dos valores: ${soma}</p>`
         res.innerHTML += `<p>Media dos valores: ${media}</p>`
     }
-
 }
 
 

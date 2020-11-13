@@ -1,11 +1,4 @@
 
-function tabulada() {
-    document.getElementById("sound").play()
-}
-
-
-
-
 var display = document.getElementById('display')
 var minutos = document.getElementById('minutos')
 var segundos = document.getElementById('segundos')
