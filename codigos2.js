@@ -1,5 +1,6 @@
 
-/* 
+
+/*
 let familia = [ true, 4, 'vem DI dale']
 
 console.log(familia[2])
@@ -9,7 +10,7 @@ var b = 'azul'
 
 console.log(a)
 console.log(b)
-
+ 
 var c = a
 var a = b 
 var b = c
@@ -100,7 +101,7 @@ function parEip(limite) {
 }
 
 
-
+//                                                       FILME
 const filme = {
     titulo : ': Vingadores',
     ano : 2018,
@@ -122,7 +123,7 @@ function exibeGeral(obj) {
 }
 
 
-
+//                                                       SOMANDO MULTIPLOS DE 3 e 5
 somando(5)
 
 function somando(limite) {
@@ -144,11 +145,9 @@ function somando(limite) {
 
 
 
-
-var array = [90,90,89]
-
+//                                                       MEDIA COM VETOR
+var array = [10,20,30]
 funcNotas(array)
-
 
 function funcNotas(notas) {
     var soma = 0
@@ -183,7 +182,7 @@ function funcNotas(notas) {
 
 
 
-
+//                                                       POO
 const celular = {
     tamanhoTela: {
         vertical: 155,
@@ -199,7 +198,7 @@ console.log('primeiro obj: ',msm)
 
 
 
-/// MANEIRA COMPLETA DE DUPLICAR UM IBJ
+///                                                     MANEIRA COMPLETA DE DUPLICAR UM IBJ
 const novoObjeto = Object.assign({
     bateria: 5000,
     vertical: 777
@@ -207,7 +206,7 @@ const novoObjeto = Object.assign({
 
 console.log('Segundo obj: ',novoObjeto.vertical)
 
-/// MANEIRA RÁPIDA DE DUPLICAR UM OBJ
+///                                                     MANEIRA RÁPIDA DE DUPLICAR UM OBJ
 const objeto3 = {...novoObjeto}
 console.log('Terceiro obj: ',objeto3)
 
@@ -215,7 +214,7 @@ console.log('Terceiro obj: ',objeto3)
 
 
 
-//                                                 MINI 11
+//                                                          MINI 11
 const endereco = {
     
     rua: 05,
@@ -237,7 +236,7 @@ mostraEn(endereco)
 
 
 
-//                                  COMPARAÇÃO DENTRO DE OBJ
+//                                                          COMPARAÇÃO DENTRO DE OBJ
 function Endereco(rua, cidade, cep) {
     this.rua = rua,
     this.cidade = cidade,
