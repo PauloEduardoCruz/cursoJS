@@ -1,0 +1,24 @@
+{
+  "name": "cursoJS",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PauloEduardoCruz/cursoJS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PauloEduardoCruz/cursoJS/issues"
+  },
+  "homepage": "https://github.com/PauloEduardoCruz/cursoJS#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6"
+  }
+}
