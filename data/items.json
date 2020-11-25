@@ -1,1 +1,14 @@
-[]
+[
+    {
+        "id": "uoqo3vamd",
+        "name": "Clara",
+        "email": "vaibem@vindo.com",
+        "phone": "99999991"
+    },
+    {
+        "id": "a7j5p7itk",
+        "name": "Mara",
+        "email": "taibem@vindo.com",
+        "phone": "79999991"
+    }
+]
