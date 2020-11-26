@@ -1,18 +1,46 @@
 var xhr = new XMLHttpRequest()
 var documento;
 
+document.body.style.background = "#333";
 //xhr.responseType = "json"
-xhr.onreadystatechange = function (){
+
+var vaiSubir = {
+    "name": "AAAAAAAA",
+    "email": "cavalo@vindo.com",
+    "phone": "656565"
+}
+
+ //vaiSubir = JSON.stringify(vaiSubir)
+
+xhr.onreadystatechange = () => {
+
+    /*
     if(xhr.readyState == 4 && xhr.status == 200){
         documento = xhr.response
         documento = JSON.parse(documento)
 
-
-        console.log("Deu certo")
-        console.log(documento)
+        console.log(xhr.status)
+        console.log(documento[2].email) 
     }
+    */
+
+   console.log(xhr.status)
+    if(xhr.readyState == 4 && xhr.status == 201){
+        console.log(xhr.status)
+    }
+
 }
 
-xhr.open("GET", "http://localhost:3001")
-xhr.send()
+
+/*
+function chama() {
+    xhr.open("GET", "http://localhost:3001")
+    xhr.send()
+}
+*/
+
+function postar() {
+    xhr.open("POST", "http://localhost:3001")
+    xhr.send()
+}
 

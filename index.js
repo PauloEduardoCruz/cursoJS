@@ -23,7 +23,8 @@ const writeFile = (content) => {
 router.get('/', (req, res) => {
     const content = readFile()
 
-    //res.header("Access-Control-Allow-Origin", "*");
+    //Essa linha permite o cors
+    res.header("Access-Control-Allow-Origin", "*");
     //res.header("Access-Control-Allow-Headers", "Origin, X-Request-Width, Content-Type, Accept");
 
     res.send(content)
@@ -32,6 +33,8 @@ router.get('/', (req, res) => {
 
 
 router.post('/', (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
+
     const { name, email, phone } = req.body
     const currentContent = readFile()
 
@@ -41,6 +44,7 @@ router.post('/', (req, res) => {
     currentContent.push({ id, name, email, phone })
     writeFile(currentContent)
     res.send({ id, name, email, phone } )
+    
 })
 
 
@@ -85,5 +89,5 @@ router.delete('/:id', (req, res) => {
 server.use(router)
 
 server.listen(3001, () => {
-    console.log("Rodando servidor")
+    console.log("Ouvindo na porta 3001")
 })
