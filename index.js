@@ -10,6 +10,8 @@ const { get } = require("http")
 
 server.use(express.json({extended: true}))
 
+
+
 const readFile = () => {
     const content = fs.readFileSync('./data/items.json', 'utf-8')
     return JSON.parse(content)
@@ -39,7 +41,7 @@ router.post('/', (req, res) => {
     const currentContent = readFile()
 
     const id = Math.random().toString(32).substr(2,9)
-    //console.log(id)
+    console.log(id)
 
     currentContent.push({ id, name, email, phone })
     writeFile(currentContent)
@@ -91,3 +93,4 @@ server.use(router)
 server.listen(3001, () => {
     console.log("Ouvindo na porta 3001")
 })
+
